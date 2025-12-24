@@ -1,38 +1,107 @@
-.App {
-  text-align: center;
+/* Add these to your existing App.css */
+
+/* Form styles */
+.form-group {
+  margin-bottom: 1.5rem;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #555;
+  font-weight: 500;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.country-code-select {
+  width: 100%;
+  padding: 12px;
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  font-size: 1rem;
+  background: #f8f9fa;
+  transition: border-color 0.3s;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.country-code-select:focus {
+  outline: none;
+  border-color: #667eea;
+}
+
+.phone-input-wrapper {
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: border-color 0.3s;
 }
 
-.App-link {
-  color: #61dafb;
+.phone-input-wrapper:focus-within {
+  border-color: #667eea;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.country-code-display {
+  padding: 0 15px;
+  background: #f8f9fa;
+  height: 46px;
+  display: flex;
+  align-items: center;
+  border-right: 2px solid #e0e0e0;
+  font-weight: 500;
+}
+
+.phone-input {
+  flex: 1;
+  padding: 12px;
+  border: none;
+  font-size: 1rem;
+}
+
+.phone-input:focus {
+  outline: none;
+}
+
+.helper-text {
+  display: block;
+  margin-top: 5px;
+  color: #666;
+  font-size: 0.85rem;
+}
+
+/* Loading spinner */
+.spinner {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  border: 2px solid rgba(255,255,255,0.3);
+  border-radius: 50%;
+  border-top-color: white;
+  animation: spin 1s ease-in-out infinite;
+  margin-right: 8px;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+.send-otp-btn.loading {
+  opacity: 0.8;
+  cursor: not-allowed;
+}
+
+/* Info box */
+.info-box {
+  margin-top: 2rem;
+  padding: 1.5rem;
+  background: #f0f7ff;
+  border-radius: 10px;
+  border-left: 4px solid #667eea;
+}
+
+.info-box p {
+  margin: 0.5rem 0;
+  color: #555;
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
