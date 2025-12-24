@@ -10,6 +10,9 @@
 #env 
 /.env
 
+#service
+firebase.js
+
 # production
 /build
 
